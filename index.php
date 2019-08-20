@@ -141,7 +141,7 @@
                             <h1 class="h4 text-gray-900 mb-2">Masukan NIS</h1>
                             <p class="mb-4">Silahkan Masukan NIS</p>
                           </div>
-                          <form class="user">
+                          <form action="database.php?aksi=validasiNis" method="POST">
                             <div class="form-group">
                               <input type="text" class="form-control form-control-user" id="nis" aria-describedby="nis" placeholder="Nis...">
                             </div>
@@ -149,9 +149,11 @@
                               Lanjutkan
                             </a> -->
                             <!-- Button to Open the Modal -->
-                            <button type="button" class="form-control btn btn-primary" data-toggle="modal" data-target="#myModal">
-                              Lanjutkan
-                            </button>
+                            <div class="form-group">
+                              <button class="form-control btn btn-primary" type="submit">
+                                Lanjutkan
+                              </button>
+                            </div>
                           </form>
                           <hr>
                         </div>
