@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+include'database.php';
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -141,9 +144,9 @@
                             <h1 class="h4 text-gray-900 mb-2">Masukan NIS</h1>
                             <p class="mb-4">Silahkan Masukan NIS</p>
                           </div>
-                          <form action="database.php?aksi=validasiNis" method="POST">
+                          <form action="function.php?aksi=validasiNis" method="POST">
                             <div class="form-group">
-                              <input type="text" class="form-control form-control-user" id="nis" aria-describedby="nis" placeholder="Nis...">
+                              <input type="text" class="form-control form-control-user" id="nis" name="nis" aria-describedby="nis" placeholder="Nis...">
                             </div>
                             <!-- <a href="login.html" class="btn btn-primary btn-user btn-block">
                               Lanjutkan
@@ -436,19 +439,131 @@
 
                 <!-- The Modal -->
         <div class="modal" id="myModal">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-lg">
             <div class="modal-content">
 
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">Modal Heading</h4>
+                <h4 class="modal-title">Daftar Calon Ketua Osis</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
 
               <!-- Modal body -->
               <div class="modal-body">
-                Modal body..
+              
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Dwi Syifa Novia. H</h6>
+                  </div>
+                  <img src="img/orang/1.png" class="card-img-top" alt="...">
+                  <!-- Card Body -->
+                  <div class="card-body text-center">
+                  <a href="function.php?aksi=pilihOsis&pilihan=1&nis=<?=$_GET['nis'];?>" class="btn btn-primary btn-block btn-lg">Pilih</a>
+                  </div>
+                </div>
               </div>
+
+              <div class="col-md-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Indah Maelani</h6>
+                  </div>
+                  <img src="img/orang/2.png" class="card-img-top" alt="...">
+                  <!-- Card Body -->
+                  <div class="card-body text-center">
+                  <a href="function.php?aksi=pilihOsis&pilihan=2&nis=<?=$_GET['nis'];?>" class="btn btn-primary btn-block btn-lg">Pilih</a>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Muhammad Fachri</h6>
+                  </div>
+                  <img src="img/orang/3.png" class="card-img-top" alt="...">
+                  <!-- Card Body -->
+                  <div class="card-body text-center">
+                  <a href="function.php?aksi=pilihOsis&pilihan=3&nis=<?=$_GET['nis'];?>" class="btn btn-primary btn-block btn-lg">Pilih</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Noor Tajali</h6>
+                  </div>
+                  <img src="img/orang/4.png" class="card-img-top" alt="...">
+                  <!-- Card Body -->
+                <div class="card-body text-center">
+                  <a href="function.php?aksi=pilihOsis&pilihan=4&nis=<?=$_GET['nis'];?>" class="btn btn-primary btn-block btn-lg">Pilih</a>
+                    
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Zaneti Riguna</h6>
+                  </div>
+                  <img src="img/orang/5.png" class="card-img-top" alt="...">
+                  <!-- Card Body -->
+                  <div class="card-body text-center">
+                  <a href="function.php?aksi=pilihOsis&pilihan=5&nis=<?=$_GET['nis'];?>" class="btn btn-primary btn-block btn-lg">Pilih</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Herland Ahmad Davera</h6>
+                  </div>
+                  <img src="img/orang/6.png" class="card-img-top" alt="...">
+                  <!-- Card Body -->
+                  <div class="card-body text-center">
+                  <a href="function.php?aksi=pilihOsis&pilihan=6&nis=<?=$_GET['nis'];?>" class="btn btn-primary btn-block btn-lg">Pilih</a>
+                    
+                  </div>
+                </div>
+              </div>
+              </div>
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Muhammad Ikhsan Pradiptianto</h6>
+                  </div>
+                  <img src="img/orang/7.png" class="card-img-top" alt="...">
+                  <!-- Card Body -->
+                  <div class="card-body text-center">
+                  <a href="function.php?aksi=pilihOsis&pilihan=7&nis=<?=$_GET['nis'];?>" class="btn btn-primary btn-block btn-lg">Pilih</a>
+                  </div>
+                </div>
+              </div>
+
+              </div>
+          </div>
+          </div>
 
               <!-- Modal footer -->
               <div class="modal-footer">
@@ -520,5 +635,18 @@
   <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
+<script>
+
+$(document).ready(function() {
+     
+      $.urlParam = function(name){
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      return results[1] || 0;
+    }
+    if($.urlParam('nis') != null);  
+    $("#myModal").modal("show");
+    } );
+    
+  </script>
 
 </html>

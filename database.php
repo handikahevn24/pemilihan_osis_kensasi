@@ -2,13 +2,16 @@
 /*
 * Mysql database class - only one connection alowed
 */
+
+// $aksi = $_GET['aksi'];
+
 class Database {
 	private $_connection;
 	private static $_instance; //The single instance
 	private $_host = "localhost";
 	private $_username = "root";
 	private $_password = "";
-	private $_database = "si_pegadaian";
+	private $_database = "osis";
 	/*
 	Get an instance of the Database
 	@return Instance
@@ -36,5 +39,11 @@ class Database {
 	public function getConnection() {
 		return $this->_connection;
 	}
+
+
+	public function validasiNis($nis){
+
+	}
+	
 }
 ?>
