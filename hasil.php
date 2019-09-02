@@ -1,3 +1,6 @@
+<?php
+include'function.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +59,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-check-square"></i>
           <span>Pemilihan Ketua Osis</span></a>
       </li>
@@ -130,10 +133,10 @@
           </div>
 
           <!-- Content Row -->
-          <div class="row">
+          <!-- <div class="row">
               <div class="card col-12 o-hidden border-0 shadow-lg mb-4">
                   <div class="card-body p-0">
-                    <!-- Nested Row within Card Body -->
+                    
                     <div class="row">
                       <div class="col-lg-12">
                         <div class="p-1">
@@ -147,7 +150,7 @@
                     </div>
                   </div>
                 </div>
-          </div>
+          </div> -->
 
           <!-- Content Row -->
 
@@ -155,28 +158,40 @@
 
 
             <!-- Pie Chart -->
-            <div class="col-xl-12 col-lg-12">
+            <div class="col-xl-12 col-lg-12 col-sm-12 col-md-12">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Hasil Pemilihan Osis</h6>
                 </div>
                 <!-- Card Body -->
-                <div class="card-body">
+                <div class="card-body mb">
                   <div class="chart-pie pt-4 pb-2">
                     <canvas id="myPieChart"></canvas>
                   </div>
-                  <div class="mt-4 text-center small">
+                  <!-- <div class="mt-4 text-center small">
                     <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Direct
+                      <i class="fas fa-circle text-primary"></i> Syifa
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Social
+                      <i class="fas fa-circle text-success"></i> Indah
                     </span>
                     <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Referral
+                      <i class="fas fa-circle text-info"></i> Fachri
                     </span>
-                  </div>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-primary"></i> Noor
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-success"></i> Zaneti
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-info"></i> Herland
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-info"></i> Ikhsan
+                    </span>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -241,9 +256,61 @@
   <!-- Page level plugins -->
   <script src="vendor/chart.js/Chart.min.js"></script>
 
-  <!-- Page level custom scripts -->
+  <!-- Page level custom scripts
   <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script> -->
+
+  <script>
+            var ctx = document.getElementById("myPieChart");
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                  labels: ["1. Syifa", "2. Indah", "3. Fachri", "4. Noor", "5. Zaneti", "6. Herland", "7. Ikhsan"],
+                    datasets: [{
+                            label: ' Votes',
+                            data: [<?php ambilData(1);?>, <?php ambilData(2);?>, <?php ambilData(3);?>, <?php ambilData(4);?>, <?php ambilData(5);?>, <?php ambilData(6);?>,<?php ambilData(7);?>],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderWidth: 1
+                        }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                    }
+                }
+            });
+        </script>
 
 </body>
 
